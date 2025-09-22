@@ -9,21 +9,31 @@ Quagsire_sleep=load_image('Sleep-Anim.png')
 
 
 def animation_walk():
-    for n in range(0,500):
+    for n in range(0,5):
         frame = 0
         for x in range(4):
             clear_canvas()
-            Quagsire_walk.clip_draw(frame*48,200,48,40,400,200,300,300)
+            Quagsire_walk.clip_draw(frame*48,200,48,40,400,200,600,600)
             frame=(frame+1)%4
             update_canvas()
             delay(0.1)
 
-
+def animation_idle():
+    for n in range(0,5):
+        frame = 0
+        for x in range(4):
+            clear_canvas()
+            Quagsire_idle.clip_draw(frame * 48, 398, 48, 56, 400, 200, 600, 600)
+            frame = (frame + 1) % 7
+            update_canvas()
+            delay(0.1)
 # 여기를 채우세요.
 while(True):
     clear_canvas()
     #그림 및 애니메이션
     animation_walk()
+    delay(1)
+    animation_idle()
 
     update_canvas()
     delay(0.01)

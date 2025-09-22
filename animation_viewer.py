@@ -50,8 +50,6 @@ while(True):
     animation_sleep()
     delay(1)
 
-    delay(0.01)
-
 
 close_canvas()
 

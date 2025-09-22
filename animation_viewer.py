@@ -30,17 +30,26 @@ def animation_shoot():
             Quagsire_shoot.clip_draw(frame * 48, 336, 44, 56, 400, 200, 600, 600)
             update_canvas()
             delay(0.1)
-
+def animation_sleep():
+    for n in range(0,5):
+        for frame in range(2):
+            clear_canvas()
+            Quagsire_sleep.clip_draw(frame * 32, 0, 32, 24, 400, 220, 600, 600)
+            update_canvas()
+            delay(0.5)
 # 여기를 채우세요.
 while(True):
-    clear_canvas()
-    #그림 및 애니메이션
+
+   # 그림 및 애니메이션
     animation_walk()
     delay(1)
     animation_idle()
     delay(1)
     animation_shoot()
-    update_canvas()
+    delay(1)
+    animation_sleep()
+    delay(1)
+
     delay(0.01)
 
 
